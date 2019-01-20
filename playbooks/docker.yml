@@ -1,0 +1,9 @@
+---
+- name: Install and config Docker service
+  hosts: all
+  become: yes
+  become_method: sudo
+  pre_tasks:
+    - shell: echo 'will apply role'
+  roles:
+     - docker

@@ -1,0 +1,7 @@
+---
+- name: configure and deploy the webservers and application code
+  hosts: all
+  become: yes
+  become_method: sudo
+  roles:
+     - web-server
