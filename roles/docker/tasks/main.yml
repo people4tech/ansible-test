@@ -39,5 +39,8 @@
   template: "src=config.json.j2 dest=/home/{{ ansible_ssh_user }}/.docker/config.json"
   when: docker_auth is defined
 
+- name: This is to test jenking script ran
+  shell: echo " TEsting dockers " > /var/syedtest_jenking.txt
+
 - include: docker_py.yml
   when: install_docker_py
